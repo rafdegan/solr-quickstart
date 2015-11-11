@@ -1,0 +1,33 @@
+#!/bin/bash 
+set -e
+
+SOLR_VERSION=4.10.4
+SOLR_HOME_DIR=${OPENSHIFT_DATA_DIR}solr
+SOLR_LIB_DIR=${OPENSHIFT_DATA_DIR}lib
+
+cd $OPENSHIFT_DATA_DIR
+if [ ! -d ${SOLR_HOME_DIR} ]; then
+
+  # Get Apache Solr
+  wget -c http://apache.org/dist/lucene/solr/$SOLR_VERSION/solr-$SOLR_VERSION.tgz && tar zxf solr-$SOLR_VERSION.tgz;
+  
+  # Create Solr Home directory structure
+  mkdir -p ${SOLR_HOME_DIR};
+  mkdir -p ${SOLR_LIB_DIR};
+  mkdir -p ${SOLR_LIB_DIR}/log4j;
+  mkdir -p ${SOLR_LIB_DIR}/contrib;
+  mkdir -p ${SOLR_LIB_DIR}/dist;
+    
+  # Copy libs
+  cp -R ${OPENSHIFT_DATA_DIR}solr-$SOLR_VERSION/example/lib/ext/* cp ${OPENSHIFT_DATA_DIR}solr-$SOLR_VERSION/example/resources/log4j.properties ${SOLR_LIB_DIR}/log4j;
+  cp -R solr-$SOLR_VERSION/dist/* ${SOLR_LIB_DIR}/dist;
+  cp -R solr-$SOLR_VERSION/contrib/* ${SOLR_LIB_DIR}/contrib;   
+  
+  # Copy initial configuration
+  cp -R ${OPENSHIFT_REPO_DIR}solr/* ${SOLR_HOME_DIR}
+  
+  # Copy Solr WAR
+  cp ${OPENSHIFT_DATA_DIR}solr-$SOLR_VERSION/dist/solr-$SOLR_VERSION.war ${OPENSHIFT_HOMEDIR}/jbossews/webapps/ROOT.war
+  
+fi
+
