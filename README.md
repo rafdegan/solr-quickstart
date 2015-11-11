@@ -21,7 +21,7 @@ Please change the default username and password.
 
 Replace Solr server URL
 
-	http://username:password@solrws-<domainname>.rhcloud.com/drupal
+	http://username:password@solr-<domainname>.rhcloud.com/drupal
 
 ## Changing the default username and password
 Edit .openshift/conf/tomcat-users.xml. Replace attribute values username and password of <user>
