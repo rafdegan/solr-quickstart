@@ -10,7 +10,7 @@ That's it, you can now checkout your application  at
     http://solr-<domainname>.rhcloud.com/
 
 The default user is 'solr' and the password is 'solr'.
-Please change the default password after first login.
+Please change the default password.
     
 ## Support
 Any use is at your own risk.
