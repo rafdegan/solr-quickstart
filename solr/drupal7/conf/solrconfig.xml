@@ -69,8 +69,8 @@
        directory.
     -->
     
-  <lib dir="../../solrlib/contrib/extraction/lib/" />
-  <lib dir="../../solrlib/contrib/clustering/lib/" />
+  <lib dir="../../lib/contrib/extraction/lib/" />
+  <lib dir="../../lib/contrib/clustering/lib/" />
 
   <!-- The velocity library has been known to crash Solr in some
        instances when deployed as a war file to Tomcat. Therefore all
