@@ -1,5 +1,8 @@
 # solr-quickstart
-This Git repository helps you get up and running quickly a Apache Solr 4 installation on OpenShift using Tomcat 7 (JBoss EWS 2.0)
+This Git repository helps you get up and running quickly a Apache Solr 4 installation on OpenShift using Tomcat 7 (JBoss EWS 2.0).
+
+For more informations for installing Solr instance under Tomcat
+[wiki.apache.org/solr/SolrTomcat](https://wiki.apache.org/solr/SolrTomcat)
 
 ## Running on OpenShift
 	rhc app create solr jbossews-2.0 cron --from-code=git://@github.com/rafdegan/solr-quickstart
