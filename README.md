@@ -27,7 +27,8 @@ Replace Solr server URL
 	http://username:password@solr-<domainname>.rhcloud.com/drupal
 
 ## Version
-Apache Solr 4.10.4
+Default version is Apache Solr 4.10.4, but if you want to install a specific version you can add --env SOLR_VERSION=<version>
 
-## Notice
-It does not scale
+	rhc app create solr jbossews-2.0 cron --from-code=git://@github.com/rafdegan/solr-quickstart --env SOLR_VERSION=4.6.1
+
+Only it works with version 4.x.x

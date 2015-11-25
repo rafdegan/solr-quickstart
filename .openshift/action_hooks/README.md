@@ -1,4 +1,3 @@
-For information about markers, consult the documentation:
+For information about action hooks, consult the documentation:
 
-https://developers.openshift.com/en/managing-action-hooks.html
-https://docs.openshift.org/origin-m4/oo_cartridge_developers_guide.html#openshift-builds
+http://openshift.github.io/documentation/oo_user_guide.html#action-hooks
