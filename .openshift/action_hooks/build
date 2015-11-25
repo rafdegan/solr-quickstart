@@ -12,7 +12,7 @@ cd $OPENSHIFT_DATA_DIR
 if [ ! -d ${SOLR_HOME_DIR} ]; then
 
   # Get Apache Solr
-  wget -c http://apache.org/dist/lucene/solr/${SOLR_VERSION}/solr-${SOLR_VERSION}.tgz && tar zxf solr-${SOLR_VERSION}.tgz;
+  wget -c http://archive.apache.org/dist/lucene/solr/${SOLR_VERSION}/solr-${SOLR_VERSION}.tgz && tar zxf solr-${SOLR_VERSION}.tgz;
   
   # Create Solr directory structure
   mkdir -p ${SOLR_HOME_DIR};
