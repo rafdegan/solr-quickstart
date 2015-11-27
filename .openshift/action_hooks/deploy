@@ -1,0 +1,4 @@
+#!/bin/bash 
+
+ # Copy over configuration
+  cp -R ${OPENSHIFT_REPO_DIR}solr/* ${SOLR_HOME_DIR}
