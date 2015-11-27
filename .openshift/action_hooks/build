@@ -31,7 +31,7 @@ if [ ! -d ${SOLR_HOME_DIR} ]; then
   
   # Copy collection1 and change lib directories
   cp -R solr-$SOLR_VERSION/example/solr/collection1 ${SOLR_HOME_DIR} 
-  xsltproc ${OPENSHIFT_REPO_DIR}xslt/ChangeLibDir.xsl solr-$SOLR_VERSION/example/solr/collection1/conf/solrconfig.xml
+  xsltproc -o solr-$SOLR_VERSION/example/solr/collection1/conf/solrconfig.xml ${OPENSHIFT_REPO_DIR}xslt/ChangeLibDir.xsl solr-$SOLR_VERSION/example/solr/collection1/conf/solrconfig.xml
   
   # Copy Solr WAR
   cp solr-$SOLR_VERSION/dist/solr-$SOLR_VERSION.war ${OPENSHIFT_HOMEDIR}/jbossews/webapps/ROOT.war
