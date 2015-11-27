@@ -6,7 +6,12 @@ For more informations for installing Solr instance under Tomcat
 
 ## Running on OpenShift
 	rhc app create solr jbossews-2.0 cron --from-code=git://@github.com/rafdegan/solr-quickstart
-The Solr Admin URL at:
+
+Default version is Apache Solr 4.10.4, but if you want to install a specific version you can add --env SOLR_VERSION=<version>, for example
+
+	rhc app create solr jbossews-2.0 cron --from-code=git://@github.com/rafdegan/solr-quickstart --env SOLR_VERSION=4.6.1
+
+The Solr Admin Console at:
     
 	http://solr-<domainname>.rhcloud.com/
 The default username is 'solr' and the password is 'solr'.
@@ -21,14 +26,10 @@ Edit .openshift/conf/tomcat-users.xml. Replace attribute values username and pas
 * collection1 is created using the example collection found within the binary distribution 
 * drupal is created using Solr configuration found within Apache Solr Search of Drupal module
 
-###Conf Apache Solr Search environment
+###Conf Apache Solr Search environment in Drupal
 Replace Solr server URL
 
 	http://username:password@solr-<domainname>.rhcloud.com/drupal
 
-## Version
-Default version is Apache Solr 4.10.4, but if you want to install a specific version you can add --env SOLR_VERSION=<version>
-
-	rhc app create solr jbossews-2.0 cron --from-code=git://@github.com/rafdegan/solr-quickstart --env SOLR_VERSION=4.6.1
-
+##Notice
 Only it works with version 4.x.x
