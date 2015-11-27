@@ -5,11 +5,11 @@ For more informations for installing Solr instance under Tomcat
 [wiki.apache.org/solr/SolrTomcat](https://wiki.apache.org/solr/SolrTomcat)
 
 ## Running on OpenShift
-	rhc app create solr jbossews-2.0 cron --from-code=git://@github.com/rafdegan/solr-quickstart
+	rhc app create solr jbossews-2.0 cron --from-code=https://github.com/rafdegan/solr-quickstart.git
 
 Default version is Apache Solr 4.10.4, but if you want to install a specific version you can add --env SOLR_VERSION=<version>, for example
 
-	rhc app create solr jbossews-2.0 cron --from-code=git://@github.com/rafdegan/solr-quickstart --env SOLR_VERSION=4.6.1
+	rhc app create solr jbossews-2.0 cron --from-code=https://github.com/rafdegan/solr-quickstart.git --env SOLR_VERSION=4.6.1
 
 The Solr Admin Console at:
     
